@@ -8,8 +8,8 @@ runcurl(){
 	jkusername=$4 
 	jkapi=$5 
 	jkurl=$6 
-	jktoken=$8 
-	projectname=$7
+	jktoken=$7 
+	projectname=$8
   	curl -u $username:$password -X POST https://api.bitbucket.org/1.0/repositories/$username/$reponame/services/ -d "type=Jenkins&Endpoint=http://$jkusername:$jkapi@$jkurl/&Project%20name=$projectname&Token=$jktoken"
 }
 
