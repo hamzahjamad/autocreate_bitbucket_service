@@ -7,7 +7,7 @@ runcurl(){
 	reponame=$3 
 	jkurl=$4 
 	jktoken=$5 
-	+jobname=$6
+	jobname=$6
   	curl -u $username:$password -X POST https://api.bitbucket.org/1.0/repositories/$username/$reponame/services/ -d "type=POST&URL=http://$jkurl/job/$jobname/build?token=$jktoken"
 }
 
